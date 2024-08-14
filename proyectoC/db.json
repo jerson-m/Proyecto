@@ -1,0 +1,32 @@
+{
+  "trucks": [
+    {
+      "id": 1,
+      "matricula": "azj189",
+      "capacidad": 8000,
+      "consumo": "45 kilómetros - galón",
+      "estado": "Disponible"
+    },
+    {
+      "id": 2,
+      "matricula": "gsj643",
+      "capacidad": 23000,
+      "consumo": "30 kilómetros - galón",
+      "estado": "Disponible"
+    },
+    {
+      "id": 3,
+      "matricula": "ljl221",
+      "capacidad": 30500,
+      "consumo": "23 kilómetros - galón",
+      "estado": "Disponible"
+    },
+    {
+      "id": 4,
+      "matricula": "akj990",
+      "capacidad": 40000,
+      "consumo": "15 kilómetros - galón",
+      "estado": "Disponible"
+    }
+  ]
+}
