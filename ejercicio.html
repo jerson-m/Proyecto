@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script>
+        //camion 1
+    function verificar() {
+    x = document.getElementById("c1");
+    carga = document.getElementById("carga");
+    valor = parseInt(carga.value);
+
+    if (isNaN(valor) || valor > 4000) {
+        alert("Valor invalido, revisar");
+        return false;
+    } else {
+        if (x.innerHTML === "Estado: Disponible") {
+        x.innerHTML = "Estado: Ocupado";
+        carga.value = "";
+        return true;
+        } else if (x.innerHTML === "Estado: Ocupado") {
+        alert("El estado actual es Ocupado, no se puede cargar");
+        return false;
+        }
+    }
+    }
+    function Descargar(){
+        if (x.innerHTML === "Estado: Ocupado") {
+        x.innerHTML = "Estado: Disponible";
+        alert("Camion descargado")
+        } else{
+            x.innerHTML="Estado: Disponible"
+        }
+        
+    }
+
+    //camion 2
+    function verificarc2() {
+    x2 = document.getElementById("c2");
+    carga = document.getElementById("carga2");
+    valor = parseInt(carga.value);
+
+    if (isNaN(valor) || valor > 23000) {
+        alert("Valor invalido, revisar");
+        return false;
+    } else {
+        if (x2.innerHTML === "Estado: Disponible") {
+        x2.innerHTML = "Estado: Ocupado";
+        carga.value = "";
+        return true;
+        } else if (x2.innerHTML === "Estado: Ocupado") {
+        alert("El estado actual es Ocupado, no se puede cargar");
+        return false;
+        }
+    }
+    
+    }
+    function Descargar2(){
+        if (x2.innerHTML === "Estado: Ocupado") {
+        x2.innerHTML = "Estado: Disponible";
+        alert("Camion descargado")
+        } else{
+            x2.innerHTML="Estado: Disponible"
+        }
+        
+    }
+
+    //camion 3
+    function verificarc3() {
+    x3 = document.getElementById("c3");
+    carga = document.getElementById("carga3");
+    valor = parseInt(carga.value);
+
+    if (isNaN(valor) || valor > 19000) {
+        alert("Valor invalido, revisar");
+        return false;
+    } else {
+        if (x3.innerHTML === "Estado: Disponible") {
+        x3.innerHTML = "Estado: Ocupado";
+        carga.value = "";
+        return true;
+        } else if (x3.innerHTML === "Estado: Ocupado") {
+        alert("El estado actual es Ocupado, no se puede cargar");
+        return false;
+        }
+    }}
+    function Descargar3(){
+        if (x3.innerHTML === "Estado: Ocupado") {
+        x3.innerHTML = "Estado: Disponible";
+        alert("Camion descargado")
+        } else{
+            x3.innerHTML="Estado: Disponible"
+        }
+        
+    }
+    
+
+    //camion 4
+    function verificarc4() {
+    x4 = document.getElementById("c4");
+    carga = document.getElementById("carga4");
+    valor = parseInt(carga.value);
+
+    if (isNaN(valor) || valor > 25000) {
+        alert("Valor invalido, revisar");
+        return false;
+    } else {
+        if (x4.innerHTML === "Estado: Disponible") {
+        x4.innerHTML = "Estado: Ocupado";
+        carga.value = "";
+        return true;
+        } else if (x4.innerHTML === "Estado: Ocupado") {
+        alert("El estado actual es Ocupado, no se puede cargar");
+        return false;
+        }
+    }}
+    function Descargar4(){
+        if (x4.innerHTML === "Estado: Ocupado") {
+        x4.innerHTML = "Estado: Disponible";
+        alert("Camion descargado");
+        } else{
+            x4.innerHTML="Estado: Disponible";
+        }}
+        //sugerencia
+        function sugerir(){
+            s=document.getElementById("sug").value;
+            if(s>40000 || isNaN(s)){
+                alert("fuera del limite");
+                return false;
+            }
+            else if(s<=8000){
+                alert("Se sugiere el camion 1");
+                return true;
+            }
+            else if(s<=23000){
+                alert("Se sugiere el camion 2");
+                return true;
+            }
+            else if(s<=30500){
+                alert("Se sugiere el camion 3");
+                return true;
+            }
+            else{
+                alert("Se sugiere el camion 4");
+                return true;
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+<div class="flex space-x-8 justify-center">
+    <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700 bg-blue-500 text-white p-4 ">
+            <a>
+                <img class="rounded-t-lg text-center" src="https://i.pinimg.com/236x/18/61/c7/1861c723f25ddd7d6de3bbda6c65fad7.jpg" alt="" />
+            </a>
+        <div class="p-5">
+                <a >
+                    <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Especificaciones</h5>
+                </a>
+                <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">Matricula: azj189</p>
+                <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">Capacidad: 8000Kg</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Consumo:45 kilómetros - galón</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="c1">Estado: Disponible</p>
+                <label for="small-input" class="block mb-1 text-sm font-normal text-gray-700 dark:text-gray-400">Carga</label>
+                <input type="text" id="carga" class="mb-2 w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <form><button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" onclick="verificar()" >Cargar</button>
+                <button type="button" class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900" onclick="Descargar()">Descargar</button>
+                </form>
+        </div>
+    </div>
+
+    <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 bg-blue-500 text-white p-4 ">
+        <a>
+            <img class="rounded-t-lg text-center" src="https://i.pinimg.com/236x/18/61/c7/1861c723f25ddd7d6de3bbda6c65fad7.jpg" alt="" />
+        </a>
+        <div class="p-5">
+            <a >
+                <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Especificaciones</h5>
+            </a>
+            <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">Matricula: gsj643</p>
+            <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">Capacidad: 23000Kg</p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Consumo:30 kilómetros - galón</p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="c2">Estado: Disponible</p>
+            <label for="small-input" class="block mb-1 text-sm font-normal text-gray-700 dark:text-gray-400">Carga</label>
+            <input type="text" id="carga2" class="mb-2 w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <form><button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" onclick="verificarc2()" >Cargar</button>
+            <button type="button" class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900" onclick="Descargar2()">Descargar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 bg-blue-500 text-white p-4 ">
+        <a>
+            <img class="rounded-t-lg text-center" src="https://i.pinimg.com/236x/18/61/c7/1861c723f25ddd7d6de3bbda6c65fad7.jpg" alt="" />
+        </a>
+        <div class="p-5">
+            <a >
+                <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Especificaciones</h5>
+            </a>
+            <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">Matricula: ljl221</p>
+            <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">Capacidad: 30500Kg</p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Consumo:23 kilómetros - galón</p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="c3">Estado: Disponible</p>
+            <label for="small-input" class="block mb-1 text-sm font-normal text-gray-700 dark:text-gray-400">Carga</label>
+            <input type="text" id="carga3" class="mb-2 w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <form><button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" onclick="verificarc3()" >Cargar</button>
+            <button type="button" class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900" onclick="Descargar3()">Descargar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 bg-blue-500 text-white p-4 ">
+        <a>
+            <img class="rounded-t-lg text-center" src="https://i.pinimg.com/236x/18/61/c7/1861c723f25ddd7d6de3bbda6c65fad7.jpg" alt="" />
+        </a>
+        <div class="p-5">
+            <a >
+                <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Especificaciones</h5>
+            </a>
+            <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">Matricula: akj990</p>
+            <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">Capacidad: 40000Kg</p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Consumo:15 kilómetros - galón</p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="c4">Estado: Disponible</p>
+            <label for="small-input" class="block mb-1 text-sm font-normal text-gray-700 dark:text-gray-400">Carga</label>
+            <input type="text" id="carga4" class="mb-2 w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <form><button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" onclick="verificarc4()" >Cargar</button>
+            <button type="button" class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900" onclick="Descargar4()">Descargar</button>
+            </form>
+        </div>
+    </div>
+</div>  
+    <div class="mt-5 flex justify-center">
+        <form>   
+            <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Sugerencia</label>
+            <div class="relative flex items-center">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none ">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="sug" class="block w-80 p-2 px-4 ps-10 text-sm text-white bg-gray-900 border border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Ingrese el peso a cargar"/>
+                <button type="button" onclick="sugerir()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ml-2">Sugerir</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+</html>
